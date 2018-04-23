@@ -1,0 +1,129 @@
+<aside>
+    <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+
+            <li class="{% if 'dashboard' in current_menu %} active{% end %}">
+                <a class="" href="/dashboard">
+                    <i class="icon_house_alt"></i>
+                    <span>首页</span>
+                </a>
+            </li>
+
+            {% if 'cmcc_fee' in roles %}
+            <li class="sub-menu {% if 'CMCC_FEE' in current_menu %} active{% end %}">
+                <a href="javascript:void(0);" class="{% if 'CMCC_FEE' in current_menu %} active{% end %}">
+                    <i class="icon_shield_alt"></i>
+                    <span>移动话费充值卡</span>
+                    <span class="menu-arrow arrow_carrot-right"></span>
+                </a>
+                <ul class="sub">
+                    {% if 'card_import' in roles %}
+                    <li class="{% if 'CMCC_FEE-card-import' in current_menu %}active{% end %}">
+                        <a href="/card/import?card_type=CMCC_FEE" class="">
+                            <i class="icon_cart_alt"></i>
+                            <span>卡文件导入</span>
+                        </a>
+                    </li>
+                    {% end %}
+
+                    {% if 'card_query' in roles %}
+                    <li class="{% if 'CMCC_FEE-card-query' in current_menu %}active{% end %}">
+                        <a href="/card/query?card_type=CMCC_FEE" class="">
+                            <i class="icon_cart_alt"></i>
+                            <span>卡查询</span>
+                        </a>
+                    </li>
+                    {% end %}
+
+                    {% if 'card_maintain_beta' in roles %}
+                    <li class="{% if 'CMCC_FEE-card-pool-list' in current_menu %}active{% end %}">
+                        <a href="/admin/card_pool_list?card_type=CMCC_FEE" class="">
+                            <i class="icon_cart_alt"></i>
+                            <span>卡池管理</span>
+                        </a>
+                    </li>
+
+                    <li class="{% if 'CMCC_FEE-downstream-card-pool' in current_menu %}active{% end %}">
+                        <a href="/admin/admin_downstream_card_pool?card_type=CMCC_FEE" class="">
+                            <i class="icon_cart_alt"></i>
+                            <span>下游卡池配置</span>
+                        </a>
+                    </li>
+
+                    <li class="{% if 'CMCC_FEE-card-allocation' in current_menu %}active{% end %}">
+                        <a href="/admin/card_distribution?card_type=CMCC_FEE" class="">
+                            <i class="icon_cart_alt"></i>
+                            <span>卡分配</span>
+                        </a>
+                    </li>
+                    {% end %}
+
+                </ul>
+            </li>
+            {% end %}
+
+            {% if 'sinopec' in roles %}
+            <li class="sub-menu {% if 'SINOPEC' in current_menu %} active{% end %}">
+                <a href="javascript:void(0);" class="{% if 'SINOPEC' in current_menu %} active{% end %}">
+                    <i class="icon_shield_alt"></i>
+                    <span>中石化充值卡</span>
+                    <span class="menu-arrow arrow_carrot-right"></span>
+                </a>
+                <ul class="sub">
+                    {% if 'card_import' in roles %}
+                    <li class="{% if 'SINOPEC-card-import' in current_menu %}active{% end %}">
+                        <a href="/card/import?card_type=SINOPEC" class="">
+                            <i class="icon_cart_alt"></i>
+                            <span>卡文件导入</span>
+                        </a>
+                    </li>
+
+                    <li class="{% if 'easy-import' in current_menu %}active{% end %}">
+                        <a href="/card/easy_import" class="">
+                            <i class="icon_cart_alt"></i>
+                            <span>油卡快速导入</span>
+                        </a>
+                    </li>
+                    {% end %}
+
+                    {% if 'card_query' in roles %}
+                    <li class="{% if 'SINOPEC-card-query' in current_menu %}active{% end %}">
+                        <a href="/card/query?card_type=SINOPEC" class="">
+                            <i class="icon_cart_alt"></i>
+                            <span>卡查询</span>
+                        </a>
+                    </li>
+                    {% end %}
+
+                    {% if 'card_maintain_beta' in roles %}
+                    <li class="{% if 'SINOPEC-card-pool-list' in current_menu %}active{% end %}">
+                        <a href="/admin/card_pool_list?card_type=SINOPEC" class="">
+                            <i class="icon_cart_alt"></i>
+                            <span>卡池管理</span>
+                        </a>
+                    </li>
+
+                    <li class="{% if 'SINOPEC-downstream-card-pool' in current_menu %}active{% end %}">
+                        <a href="/admin/admin_downstream_card_pool?card_type=SINOPEC" class="">
+                            <i class="icon_cart_alt"></i>
+                            <span>下游卡池配置</span>
+                        </a>
+                    </li>
+
+                    <li class="{% if 'SINOPEC-card-allocation' in current_menu %}active{% end %}">
+                        <a href="/admin/card_distribution?card_type=SINOPEC" class="">
+                            <i class="icon_cart_alt"></i>
+                            <span>卡分配</span>
+                        </a>
+                    </li>
+                    {% end %}
+
+                </ul>
+            </li>
+            {% end %}
+
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
+</aside>

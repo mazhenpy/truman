@@ -1,0 +1,19 @@
+﻿[
+  {
+    "outputFile": "static/js/card-query.js",
+    "inputFile": "static/jsx/card-query.jsx"
+  },
+  {
+    "outputFile": "static/js/admin_card_pool_list.js",
+    "inputFile": "static/jsx/admin_card_pool_list.jsx"
+  },
+  {
+    "outputFile": "static/js/admin_card_distribution.js",
+    "inputFile": "static/jsx/admin_card_distribution.jsx"
+  },
+  {
+    "outputFile": "static/js/admin_downstream_card_pool.js",
+    "inputFile": "static/jsx/admin_downstream_card_pool.jsx"
+  }
+]
+
